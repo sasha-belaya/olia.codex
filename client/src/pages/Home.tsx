@@ -30,26 +30,27 @@ export default function Home() {
       id: "basic",
       name: "Самостоятельный",
       features: ["4 модуля", "Обучение в своём темпе", "Доступ — 3 месяца"],
-      oldPrice: "25 571 ₽",
-      newPrice: "17 900 ₽",
-      link: "https://payform.ru/rrar0rs/",
+      oldPrice: "33 900 ₽",
+      newPrice: "23 900 ₽",
+      link: "https://payform.ru/l5atjsS/",
     },
     {
       id: "curator",
       name: "С куратором",
       features: ["6 модулей", "Поддержка куратора", "Созвоны", "1 личная встреча со мной"],
-      oldPrice: "62 714 ₽",
-      newPrice: "43 900 ₽",
-      link: "https://payform.ru/haaonv5/",
+      oldPrice: "75 900 ₽",
+      newPrice: "52 900 ₽",
+      link: "https://payform.ru/t5atx3Q/",
       featured: true,
     },
     {
       id: "vip",
       name: "VIP",
       features: ["Личная работа со мной", "Еженедельные встречи", "Работа до внедрения"],
-      oldPrice: "128 429 ₽",
-      newPrice: "89 900 ₽",
-      link: "https://payform.ru/moaonxY/",
+      oldPrice: "139 900 ₽",
+      newPrice: "99 900 ₽",
+      link: "https://forms.yandex.ru/u/69773935902902f2e106cfa3",
+      preOrder: true,
     },
   ];
 
@@ -72,7 +73,7 @@ export default function Home() {
       num: "1", 
       title: "AI-База, распаковка и бренд", 
       subtitle: "От новичка к AI-креатору с позиционированием",
-      duration: "5 уроков + домашние задания",
+      duration: "4 урока + домашние задания",
       desc: "Это фундамент твоей будущей карьеры. Ты не просто изучишь нейросети — ты поймёшь, кто ты, какой у тебя стиль, кому ты нужен и за что будешь брать деньги.",
       content: [
         "AI-рынок и экосистема нейросетей: какие бывают инструменты, где деньги и почему важно уметь выбирать",
@@ -87,7 +88,7 @@ export default function Home() {
       num: "2", 
       title: "Реалистичные AI-фото", 
       subtitle: "От идеи до готовой фотосессии",
-      duration: "9 уроков + итоговая мини-фотосессия",
+      duration: "6 уроков + итоговая фотосессия",
       desc: "Здесь ты научишься не просто 'нажимать generate', а планировать и создавать коммерческие AI-фотосессии. Ты поймёшь разницу между 'красиво' и 'продаёт'.",
       content: [
         "Коммерческий реализм: почему пластик не работает, примеры хороших и плохих AI-фото",
@@ -99,7 +100,7 @@ export default function Home() {
         "Живые лица, кожа и свет: как писать промпты и добиваться реализма",
         "Как убрать пластик и фейк: типовые ошибки и доработка"
       ],
-      result: "Ты собираешь мини-фотосессию из 4-6 реалистичных кадров в своём стиле. Это уже портфолио, которое можно показывать клиентам."
+      result: "Итог: полноценная фотосессия, работы с товарами/продуктами, понимание как делать замену. Это уже портфолио, которое можно показывать клиентам."
     },
     { 
       num: "3", 
@@ -182,7 +183,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen text-white overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-[#222222]">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -215,13 +216,13 @@ export default function Home() {
             <br />а разобраться, как сделать из этого навык и зарабатывать на нём.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-12 text-sm md:text-lg lg:text-xl">
-            <span className="text-white/60">Навык</span>
+            <span className="text-white/60 font-bold uppercase">Навык</span>
             <ArrowRight className="text-[#ff007f]" />
-            <span className="text-white/60">контент</span>
+            <span className="text-white/60 font-bold uppercase">контент</span>
             <ArrowRight className="text-[#ff007f]" />
-            <span className="text-white/60">клиенты</span>
+            <span className="text-white/60 font-bold uppercase">клиенты</span>
             <ArrowRight className="text-[#ff007f]" />
-            <span className="text-[#ff007f] font-bold">деньги</span>
+            <span className="text-[#ff007f] font-bold uppercase">деньги</span>
           </div>
           <a href="#pricing">
             <Button 
@@ -238,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* What is this */}
-      <section className="py-8 md:py-12 bg-[#222222]">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 text-center">Что это за обучение</h2>
           
@@ -257,7 +258,7 @@ export default function Home() {
 
           {/* Карточки с результатами */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300">
+            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-sm bg-[#ff007f]/20 border border-[#ff007f] flex items-center justify-center mb-4">
                   <ImageIcon className="w-7 h-7 text-[#ff007f]" />
@@ -267,7 +268,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300">
+            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-sm bg-[#ff007f]/20 border border-[#ff007f] flex items-center justify-center mb-4">
                   <Video className="w-7 h-7 text-[#ff007f]" />
@@ -277,7 +278,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300">
+            <Card className="bg-black border border-[#ff007f] p-5 hover:border-[#ff007f] hover:shadow-[0_0_20px_rgba(255,0,127,0.2)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-sm bg-[#ff007f]/20 border border-[#ff007f] flex items-center justify-center mb-4">
                   <DollarSign className="w-7 h-7 text-[#ff007f]" />
@@ -302,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* Who is it for */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8">Кому подойдёт курс</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -314,7 +315,7 @@ export default function Home() {
               "хотите работать удалённо и гибко",
               "готовы учиться и применять навыки на практике",
             ].map((text, idx) => (
-              <Card key={idx} className="bg-[#222222] border border-[#ff007f] p-6 hover:bg-[#ff007f]/10 transition-colors">
+              <Card key={idx} className="bg-black/40 backdrop-blur-sm border border-[#ff007f] p-6 hover:bg-[#ff007f]/10 transition-colors rounded-3xl">
                 <p className="text-lg">{text}</p>
               </Card>
             ))}
@@ -326,7 +327,7 @@ export default function Home() {
       </section>
 
       {/* How you will learn */}
-      <section className="py-8 md:py-12 bg-[#222222] relative">
+      <section className="py-8 md:py-12 relative">
         <div 
           className="absolute inset-0 opacity-5"
           style={{
@@ -377,7 +378,7 @@ export default function Home() {
       </section>
 
       {/* Results */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8">Что будет в итоге</h2>
           <div className="max-w-4xl mx-auto">
@@ -424,7 +425,7 @@ export default function Home() {
       </section>
 
       {/* Program */}
-      <section className="py-8 md:py-12 bg-[#222222]">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8">Программа курса</h2>
           <p className="text-xl mb-12 max-w-3xl">
@@ -534,7 +535,7 @@ export default function Home() {
       </section>
 
       {/* Course Bonuses */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 text-center">Бонусы курса</h2>
           <p className="text-xl text-center mb-12 text-white/80 max-w-3xl mx-auto">
@@ -543,7 +544,7 @@ export default function Home() {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-[#222222] border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300">
+            <Card className="bg-black/40 backdrop-blur-sm border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-sm bg-[#ff007f]/20 border-2 border-[#ff007f] flex items-center justify-center mb-4">
                   <Sparkles className="w-8 h-8 text-[#ff007f]" />
@@ -553,7 +554,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="bg-[#222222] border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300">
+            <Card className="bg-black/40 backdrop-blur-sm border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-sm bg-[#ff007f]/20 border-2 border-[#ff007f] flex items-center justify-center mb-4">
                   <ImageIcon className="w-8 h-8 text-[#ff007f]" />
@@ -563,7 +564,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="bg-[#222222] border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300">
+            <Card className="bg-black/40 backdrop-blur-sm border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-sm bg-[#ff007f]/20 border-2 border-[#ff007f] flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-[#ff007f]" />
@@ -573,7 +574,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="bg-[#222222] border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300">
+            <Card className="bg-black/40 backdrop-blur-sm border-2 border-[#ff007f] p-6 hover:border-[#ff007f] hover:shadow-[0_0_30px_rgba(255,0,127,0.3)] transition-all duration-300 rounded-3xl">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-sm bg-[#ff007f]/20 border-2 border-[#ff007f] flex items-center justify-center mb-4">
                   <Target className="w-8 h-8 text-[#ff007f]" />
@@ -599,7 +600,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-8 md:py-12 bg-[#222222]">
+      <section id="pricing" className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 text-center">Тарифы участия</h2>
           <div className="text-center mb-12">
@@ -614,15 +615,20 @@ export default function Home() {
             {tariffs.map((tariff) => (
               <Card 
                 key={tariff.id}
-                className={`bg-black p-8 relative ${
+                className={`bg-black p-8 relative rounded-3xl ${
                   tariff.featured 
                     ? 'border-[#ff007f] border-4 pink-glow scale-105' 
                     : 'border-[#222222] border-2'
                 }`}
               >
                 {tariff.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff007f] px-6 py-2 font-bold">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff007f] px-6 py-2 font-bold rounded-full">
                     ПОПУЛЯРНЫЙ
+                  </div>
+                )}
+                {tariff.preOrder && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-600 px-6 py-2 font-bold rounded-full">
+                    SOLD OUT
                   </div>
                 )}
                 <div className="flex justify-center items-center mb-6">
@@ -641,15 +647,21 @@ export default function Home() {
                   <div className="text-5xl font-black text-[#ff007f]">{tariff.newPrice}</div>
                 </div>
                 <Button 
-                  className={`w-full text-lg py-6 ${
+                  className={`w-full text-lg py-6 rounded-2xl ${
                     tariff.featured
                       ? 'bg-[#ff007f] hover:bg-[#ff007f]/80 pink-glow-hover'
-                      : 'bg-[#222222] hover:bg-[#ff007f] border-2 border-[#ff007f]'
+                      : 'bg-black/40 backdrop-blur-sm hover:bg-[#ff007f] border-2 border-[#ff007f]'
                   }`}
                   onClick={() => handleTariffClick(tariff.link)}
                 >
-                  ВЫБРАТЬ ТАРИФ
+                  {tariff.preOrder ? 'ЗАПИСАТЬСЯ В VIP-ГРУППУ' : 'ВЫБРАТЬ ТАРИФ'}
                 </Button>
+                {tariff.preOrder && (
+                  <p className="text-center text-sm text-white/70 mt-4">
+                    Предзапись в следующую VIP-группу.<br />
+                    Старт: 02.03
+                  </p>
+                )}
               </Card>
             ))}
           </div>
@@ -657,7 +669,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8">Отзывы учеников</h2>
           
@@ -693,7 +705,7 @@ export default function Home() {
                 ].map((testimonial, idx) => (
                   <CarouselItem key={idx}>
                     <div className="p-1">
-                      <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                      <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                         <img 
                           src={testimonial.src} 
                           alt={testimonial.alt}
@@ -723,14 +735,14 @@ export default function Home() {
       </section>
 
       {/* Результаты учеников */}
-      <section className="py-8 md:py-12 bg-[#222222]">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 text-center">Результаты учеников</h2>
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_1_2026-01-19_11-48-24.jpg" 
                       alt="Галина Кузнецова - результаты ученицы" 
@@ -741,7 +753,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_2_2026-01-19_11-48-24.jpg" 
                       alt="Точка А - история трансформации" 
@@ -752,7 +764,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_3_2026-01-19_11-48-24.jpg" 
                       alt="Точка Б - результаты после обучения" 
@@ -763,7 +775,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_4_2026-01-19_11-48-24.jpg" 
                       alt="Статистика видео Reels - аналитика" 
@@ -774,7 +786,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_5_2026-01-19_11-48-24.jpg" 
                       alt="Статистика видео Reels - детальная аналитика" 
@@ -785,7 +797,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_6_2026-01-19_11-48-24.jpg" 
                       alt="Заработок за сутки 16500 рублей" 
@@ -796,7 +808,7 @@ export default function Home() {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                  <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                     <img 
                       src="/images/photo_7_2026-01-19_11-48-24.jpg" 
                       alt="Отзыв ученицы о курсе" 
@@ -823,21 +835,22 @@ export default function Home() {
       </section>
 
       {/* Работы учеников */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 text-center">Работы учеников</h2>
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               {[
-                'IMG_3092.PNG', 'IMG_3093.PNG', 'IMG_3094.PNG', 'IMG_3095.PNG', 'IMG_3096.PNG',
+                'student-work-new-1.jpg', 'student_work_7.jpg', 'student_work_8.jpg', 'student_work_9.jpg', 'student_work_10.jpg',
+                'IMG_3092.PNG', 'IMG_3094.PNG', 'IMG_3095.PNG', 'IMG_3096.PNG',
                 'IMG_3097.JPG', 'IMG_3098.JPG', 'IMG_3099.JPG', 'IMG_3100.JPG', 'IMG_3101.JPG',
                 'IMG_3102(2).JPG', 'IMG_3103.JPG', 'IMG_3104.JPG', 'IMG_3105.JPG', 'IMG_3106.JPG',
                 'IMG_3107.JPG', 'IMG_3108.JPG', 'IMG_3109.JPG', 'IMG_3110.JPG', 'IMG_3111.JPG',
-                'IMG_3112.JPG', 'IMG_3113.JPG', 'IMG_3114.JPG', 'IMG_3115.JPG'
+                'IMG_3112.JPG', 'IMG_3113.JPG', 'IMG_3114.JPG'
               ].map((img, idx) => (
                 <CarouselItem key={idx}>
                   <div className="p-1">
-                    <Card className="bg-black border-2 border-[#ff007f] overflow-hidden">
+                    <Card className="bg-black border-2 border-[#ff007f] overflow-hidden rounded-3xl">
                       <img 
                         src={`/images/${img}`}
                         alt="Работы учеников курса AI-CREATOR"
@@ -851,7 +864,7 @@ export default function Home() {
             <CarouselPrevious className="-left-4 md:-left-12 bg-[#ff007f] border-none text-white hover:bg-[#ff007f]/80" />
             <CarouselNext className="-right-4 md:-right-12 bg-[#ff007f] border-none text-white hover:bg-[#ff007f]/80" />
             <div className="flex justify-center gap-2 mt-6">
-              {[...Array(24)].map((_, idx) => (
+              {[...Array(27)].map((_, idx) => (
                 <button
                   key={idx}
                   className="w-2 h-2 rounded-full bg-white/30 hover:bg-[#ff007f] transition-colors"
@@ -865,11 +878,11 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-10 text-center">Часто задаваемые вопросы</h2>
           <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4">
-            <AccordionItem value="item-1" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-1" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Нужен ли опыт работы с нейросетями?
               </AccordionTrigger>
@@ -878,7 +891,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-2" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Сколько времени нужно уделять обучению?
               </AccordionTrigger>
@@ -887,7 +900,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-3" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Что если у меня не получится?
               </AccordionTrigger>
@@ -896,7 +909,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-4" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Я новичок, смогу ли я разобраться?
               </AccordionTrigger>
@@ -905,7 +918,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-5" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Можно ли оплатить частями?
               </AccordionTrigger>
@@ -914,7 +927,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-6" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Гарантируете ли вы результат?
               </AccordionTrigger>
@@ -923,7 +936,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-7" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-7" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Нужны ли технические навыки?
               </AccordionTrigger>
@@ -932,7 +945,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-8" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-8" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Как долго доступ к материалам?
               </AccordionTrigger>
@@ -941,7 +954,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-9" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-9" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Есть ли поддержка и кураторы?
               </AccordionTrigger>
@@ -950,7 +963,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-10" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-10" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Выдаётся ли сертификат?
               </AccordionTrigger>
@@ -959,7 +972,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-11" className="border-2 border-[#ff007f] bg-[#222222] px-6 rounded-sm">
+            <AccordionItem value="item-11" className="border-2 border-[#ff007f] bg-black/40 backdrop-blur-sm px-6 rounded-sm">
               <AccordionTrigger className="text-white text-lg font-semibold hover:text-[#ff007f] transition-colors py-6">
                 Что если мне не подойдёт?
               </AccordionTrigger>
@@ -973,7 +986,7 @@ export default function Home() {
 
 
       {/* Author */}
-      <section className="py-8 md:py-12 bg-black">
+      <section className="py-8 md:py-12">
         <div className="container">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8">Кто ведёт обучение</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
@@ -1090,7 +1103,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-[#222222] border-t-4 border-[#ff007f]">
+      <footer className="py-12 border-t-4 border-[#ff007f]">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>

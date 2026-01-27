@@ -69,7 +69,7 @@
   --chart-4: #990050;
   --chart-5: #66003a;
   --radius: 0;
-  --background: oklch(0 0 0); /* Pure black */
+  --background: oklch(0.15 0 0); /* Dark gray #1a1a1a */
   --foreground: oklch(1 0 0); /* Pure white */
   --card: oklch(0.134 0 0); /* Dark gray #222222 */
   --card-foreground: oklch(1 0 0);
@@ -99,10 +99,102 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 50%, #141414 100%);
+    background-attachment: fixed;
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
     line-height: 1.6;
+    position: relative;
+  }
+  
+  /* Smooth organic pattern layer */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    background-image: 
+      /* Repeating organic blobs pattern */
+      radial-gradient(
+        ellipse 400px 300px at 15% 10%,
+        rgba(255, 0, 127, 0.12) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 350px at 45% 18%,
+        rgba(255, 0, 127, 0.08) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 300px 400px at 75% 15%,
+        rgba(255, 0, 127, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 380px at 25% 35%,
+        rgba(255, 0, 127, 0.09) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 350px 280px at 55% 40%,
+        rgba(255, 0, 127, 0.11) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 320px at 85% 32%,
+        rgba(255, 0, 127, 0.08) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 380px 320px at 10% 55%,
+        rgba(255, 0, 127, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 340px at 40% 60%,
+        rgba(255, 0, 127, 0.09) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 300px 360px at 70% 52%,
+        rgba(255, 0, 127, 0.11) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 360px at 90% 58%,
+        rgba(255, 0, 127, 0.08) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 340px 290px at 20% 75%,
+        rgba(255, 0, 127, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 330px at 50% 80%,
+        rgba(255, 0, 127, 0.09) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 360px 310px at 80% 78%,
+        rgba(255, 0, 127, 0.11) 0%,
+        transparent 50%
+      );
+    background-size: 
+      100% 1200px;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+  }
+  
+  body > * {
+    position: relative;
+    z-index: 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
